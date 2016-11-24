@@ -1,0 +1,27 @@
+# https://github.com/sindresorhus/appveyor-node/blob/master/appveyor.yml
+
+environment:
+  matrix:
+    - platform: x32
+  GH_TOKEN:
+    secure: 2715c20dc6f96753850ee30aab3c0af11deefe56
+
+image: Visual Studio 2015
+
+cache:
+  - node_modules
+
+install:
+  - npm install
+
+build: off
+
+shallow_clone: true
+
+test_script:
+  - node --version
+  - npm --version
+  - npm run build
+
+on_success:
+  - npm run dist
