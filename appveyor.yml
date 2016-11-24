@@ -14,7 +14,7 @@ install:
   - npm --version
   - npm install
 
-build: on
+build: off
 
 test_script:
   - npm run build
