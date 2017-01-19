@@ -2,7 +2,7 @@
 
 environment:
   matrix:
-    - platform: x32
+    - platform: x64
   GH_TOKEN:
     secure: 2715c20dc6f96753850ee30aab3c0af11deefe56
 
